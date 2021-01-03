@@ -324,6 +324,16 @@ var helper = {
   },
 
   /**
+ * Función que saca por consola un mensaje de log en color 
+ * @param {string} [mensaje] El mensaje que queremos sacar por consola
+ */
+  logBlue: function (mensaje) {
+    var infoSymbol = String.fromCharCode('9432');
+
+    console.log(chalk.blue.bold(mensaje));
+  },
+
+  /**
    * Función que saca por consola un mensaje de log en color 
    * @param {string} [mensaje] El mensaje que queremos sacar por consola
    */
@@ -331,16 +341,6 @@ var helper = {
     var infoSymbol = String.fromCharCode('9432');
 
     console.log(chalk.red.bold(mensaje));
-  },
-
-  /**
-  * Función que saca por consola un mensaje de log en color 
-  * @param {string} [mensaje] El mensaje que queremos sacar por consola
-  */
-  logResult: function (mensaje1, mensaje2) {
-    var infoSymbol = String.fromCharCode('9432');
-
-    console.log(chalk.yellow.bold(mensaje1) + chalk.red.bold(mensaje2));
   },
 
   /**
@@ -352,6 +352,17 @@ var helper = {
     var infoSymbol = String.fromCharCode('9432');
 
     console.log(chalk.red.bold(infoSymbol) + '  ' + mensaje);
+  },
+
+
+  /**
+  * Función que saca por consola un mensaje de log en color 
+  * @param {string} [mensaje] El mensaje que queremos sacar por consola
+  */
+  logResult: function (mensaje1, mensaje2) {
+    var infoSymbol = String.fromCharCode('9432');
+
+    console.log(chalk.yellow.bold(mensaje1) + chalk.red.bold(mensaje2));
   },
 
   /**

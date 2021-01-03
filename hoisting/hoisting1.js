@@ -1,4 +1,4 @@
-const h = require('../../helper/helper').helper;
+const h = require('../helper/helper').helper;
 
 h.log("---------------------");
 h.log("Ejemplo 1 de hoisting");

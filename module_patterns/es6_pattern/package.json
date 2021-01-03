@@ -1,0 +1,9 @@
+{
+  "name": "modulo_es6",
+  "version": "1.0.0",
+  "main": "es6_pattern.js",
+  "description": "Moódulo de pruebas de ES6",
+  "type": "module",
+  "author": "Antonio García Gómez",
+  "license": "ISC"
+}
