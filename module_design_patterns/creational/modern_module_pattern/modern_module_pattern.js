@@ -1,4 +1,4 @@
-const h = require('../../helper/helper').helper;
+const h = require('../../../helper/helper').helper;
 
 // Using define
 define('foo', function () {

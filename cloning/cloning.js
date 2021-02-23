@@ -5,7 +5,7 @@ const _ = require('../node_modules/underscore/underscore');
 // Variable original
 const food = { beef: '🥩', bacon: '🥓' }
 
-// "Spread" (Shallow Clone), no funciona arrays multidimensionales o arrays aninados
+// "Spread" (Shallow Clone), no funciona en arrays multidimensionales o arrays aninados
 // A shallow copy means the first level is copied, deeper levels are referenced.
 const clone1 = { ...food }
 

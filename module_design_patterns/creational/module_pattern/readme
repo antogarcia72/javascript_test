@@ -1,0 +1,15 @@
+The module pattern allows you to encapsulate functionally and organize code in modules — parts that make your application. 
+In NodeJs, when you create a file and dump your code in there, on execution your code is wrapped in a module using the IIFE 
+(Immediately Invoked Function Expression) that looks like this:
+
+(function(require, global, exports, module, __dirname, __filename) {
+  // your Node code goes here
+})();
+
+
+…where require, global, module, exports, __dirname, and __filename are objects that are injected into your module that 
+you can access to expose parts of your code, import parts from other code, and access global info of the environment.
+
+The module pattern is perfect for grouping code for a specific feature and has control over what can be accessed from the outside. 
+A module does not even have to return anything. You may pass it some object or data and it will execute it in its own ecosystem 
+continuously which can be great.

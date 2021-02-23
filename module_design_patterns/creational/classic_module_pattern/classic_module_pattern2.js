@@ -1,6 +1,6 @@
-const h = require('../../helper/helper').helper;
+const h = require('../../../helper/helper').helper;
 
-var foo = (function () {
+var moduleManager = (function ModuleFactory() {
     var publicAPI = {
         bar: function () {
             publicAPI.baz();
@@ -13,4 +13,4 @@ var foo = (function () {
     return publicAPI;
 })();
 
-foo.bar();
+moduleManager.bar();

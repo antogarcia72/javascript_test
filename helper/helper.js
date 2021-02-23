@@ -11,6 +11,9 @@ const formato_fecha_largo = 'DD/MM/YYYY HH:mm:ss'; // 'DD/MM/YYYY HH:mm:ss:SSS'
 const path_log_pruebas = '../logs/registro_pruebas.log';
 const path_json_pruebas = '../logs/registro_pruebas.json';
 
+// Caracter que representa el símbolo de información
+const infoSymbol = String.fromCharCode('9432');
+
 var helper = {
   /**
    * Función que actualiza en el fichero de json de los casos, el caso que le pasamos como parámetro
@@ -318,29 +321,23 @@ var helper = {
    * @param {string} [mensaje] El mensaje que queremos sacar por consola
    */
   log: function (mensaje) {
-    var infoSymbol = String.fromCharCode('9432');
-
     console.log(chalk.yellow.bold(mensaje));
   },
 
   /**
- * Función que saca por consola un mensaje de log en color 
- * @param {string} [mensaje] El mensaje que queremos sacar por consola
- */
+   * Función que saca por consola un mensaje de log en color azul
+   * @param {string} [mensaje] El mensaje que queremos sacar por consola
+   */
   logBlue: function (mensaje) {
-    var infoSymbol = String.fromCharCode('9432');
-
     console.log(chalk.blue.bold(mensaje));
   },
 
   /**
-   * Función que saca por consola un mensaje de log en color 
+   * Función que saca por consola un mensaje de log en color cyan
    * @param {string} [mensaje] El mensaje que queremos sacar por consola
    */
-  logRed: function (mensaje) {
-    var infoSymbol = String.fromCharCode('9432');
-
-    console.log(chalk.red.bold(mensaje));
+  logCyan: function (mensaje) {
+    console.log(chalk.cyan.bold(mensaje));
   },
 
   /**
@@ -349,19 +346,40 @@ var helper = {
    */
 
   logError: function (mensaje) {
-    var infoSymbol = String.fromCharCode('9432');
-
     console.log(chalk.red.bold(infoSymbol) + '  ' + mensaje);
   },
 
 
   /**
-  * Función que saca por consola un mensaje de log en color 
-  * @param {string} [mensaje] El mensaje que queremos sacar por consola
-  */
-  logResult: function (mensaje1, mensaje2) {
-    var infoSymbol = String.fromCharCode('9432');
+   * Función que saca por consola un mensaje de log en color verde
+   * @param {string} [mensaje] El mensaje que queremos sacar por consola
+   */
+  logGreen: function (mensaje) {
+    console.log(chalk.green.bold(mensaje));
+  },
 
+  /**
+   * Función que saca por consola un mensaje de log en color magenta
+   * @param {string} [mensaje] El mensaje que queremos sacar por consola
+   */
+  logMagenta: function (mensaje) {
+    console.log(chalk.magenta.bold(mensaje));
+  },
+
+
+  /**
+   * Función que saca por consola un mensaje de log en color rojo
+   * @param {string} [mensaje] El mensaje que queremos sacar por consola
+   */
+  logRed: function (mensaje) {
+    console.log(chalk.red.bold(mensaje));
+  },
+
+  /**
+   * Función que saca por consola un mensaje de log en color 
+   * @param {string} [mensaje] El mensaje que queremos sacar por consola
+   */
+  logResult: function (mensaje1, mensaje2) {
     console.log(chalk.yellow.bold(mensaje1) + chalk.red.bold(mensaje2));
   },
 
@@ -371,11 +389,16 @@ var helper = {
    */
 
   logWarn: function (mensaje) {
-    var infoSymbol = String.fromCharCode('9432');
-
     console.log(chalk.yellow.bold(infoSymbol) + '  ' + mensaje);
   },
 
+  /**
+   * Función que saca por consola un mensaje de log en color amarillo
+   * @param {string} [mensaje] El mensaje que queremos sacar por consola
+   */
+  logYellow: function (mensaje) {
+    console.log(chalk.yellow.bold(mensaje));
+  },
 
   /**
    * Función que devuelve los números de casos registrados en el fichero json

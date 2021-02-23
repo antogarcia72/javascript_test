@@ -4,9 +4,9 @@ h.log("---------------------");
 h.log("Ejemplo 1 de hoisting");
 h.log("---------------------\n");
 
-h.log(a);
-h.log(b);
+h.log(a); // undefined
+h.log(b); // undefined
 var a = b;
 var b = 'caracola';
-h.log(b);
-h.log(a);
+h.log(b); // caracola
+h.log(a); // caracola
