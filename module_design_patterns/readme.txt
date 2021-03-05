@@ -1,0 +1,1 @@
+https://beforesemicolon.medium.com/10-javascript-design-patterns-to-improve-your-code-with-44c6f6c2ea94
