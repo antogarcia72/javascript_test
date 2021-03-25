@@ -11,9 +11,9 @@ thousandList[Symbol.iterator] = function* () {
     }
 };
 for (const number of thousandList) {
-    h.logBlue(number); // prints 1 to 1000
+    hlp.logBlue(number); // prints 1 to 1000
 }
 
 const prueba = [...thousandList] // [1, 2, 3, ..., 1000]
 
-h.log(prueba); // prints 1 to 1000
+hlp.log(prueba); // prints 1 to 1000

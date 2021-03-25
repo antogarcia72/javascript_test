@@ -1,18 +1,18 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
 function foo() {
 	var bar = 0;
 
 	setTimeout(() => {
-		h.log(bar++);
+		hlp.log(bar++);
 	}, 100);
 
 	setTimeout(() => {
-		h.log(bar++);
+		hlp.logCyan(bar++);
 	}, 200);
 
 };
 
-h.logResult('Closure is when a function "remembers" its lexical scope even when is executed outside that lexical scope ', '(shared scope)')
+hlp.logResult('Closure is when a function "remembers" its lexical scope even when is executed outside that lexical scope ', '(shared scope)')
 
 foo();

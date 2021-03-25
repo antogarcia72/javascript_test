@@ -1,9 +1,9 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
 var o1 = {
     bar: 'bar1',
     foo: function () {
-        h.log(this.bar);
+        hlp.log(this.bar);
     }
 };
 

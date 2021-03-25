@@ -1,11 +1,11 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
-h.logResult('This is not closuse');
+hlp.log('This is not closure');
 
-var bar = (function () {
-	var o = { bar: "bar" };
+const bar = (function () {
+	var o = { bar: 'bar' };
 
 	return { obj: o };
 })();
 
-h.log(bar.obj.bar);
+hlp.logBlue(bar.obj.bar);

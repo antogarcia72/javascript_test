@@ -1,12 +1,12 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
-h.log("---------------------");
-h.log("Ejemplo 1 de hoisting");
-h.log("---------------------\n");
+hlp.log("---------------------");
+hlp.log("Ejemplo 1 de hoisting");
+hlp.log("---------------------\n");
 
-h.log(a); // undefined
-h.log(b); // undefined
+hlp.log(a); // undefined
+hlp.log(b); // undefined
 var a = b;
 var b = 'caracola';
-h.log(b); // caracola
-h.log(a); // caracola
+hlp.log(b); // caracola
+hlp.log(a); // caracola

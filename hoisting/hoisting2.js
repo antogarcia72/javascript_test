@@ -1,19 +1,19 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
-h.log('---------------------');
-h.log('Ejemplo 2 de hoisting');
-h.log('---------------------\n');
+hlp.log('---------------------');
+hlp.log('Ejemplo 2 de hoisting');
+hlp.log('---------------------\n');
 
-h.log('Intentamos mostrar una función que aunque definida, no tiene valor');
-h.logRed(j);
+hlp.log('Intentamos mostrar una función que aunque definida, no tiene valor');
+hlp.logRed(j);
 
 var j = function d() {
     return '"Función ejecutada"';
 }
 
-h.log('Función con valor ya establecido')
-h.logRed(j);
+hlp.log('Función con valor ya establecido')
+hlp.logRed(j);
 
 
-h.log('Ejecución de la función desde la variable');
-h.logRed(j());
+hlp.log('Ejecución de la función desde la variable');
+hlp.logRed(j());

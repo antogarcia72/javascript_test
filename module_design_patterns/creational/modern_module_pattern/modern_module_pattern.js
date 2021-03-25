@@ -6,7 +6,7 @@ define('foo', function () {
 
     return {
         bar: function () {
-            h.log(o.bar);
+            hlp.log(o.bar);
         }
     }
 });

@@ -1,4 +1,4 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
 if (!Function.prototype.bind2) {
     Function.prototype.bind2 = function (o) {
@@ -10,12 +10,12 @@ if (!Function.prototype.bind2) {
 }
 
 function foo(baz) {
-    h.log(this.bar + ' ' + baz);
+    hlp.log(this.bar + ' ' + baz);
 }
 
 var obj = { bar: 'bar' }
 
-h.log('Hard binding 2')
+hlp.log('Hard binding 2')
 foo = foo.bind2(foo, obj);
 
 foo('baz');

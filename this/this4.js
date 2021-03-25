@@ -1,7 +1,7 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
 function foo() {
-    h.log(this.bar);
+    hlp.log(this.bar);
 }
 
 
@@ -10,5 +10,5 @@ var obj = { bar: 'bar2' }
 
 foo();
 
-h.logBlue('Explicit binding')
+hlp.logBlue('Explicit binding')
 foo.call(obj); // Explicit binding

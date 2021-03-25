@@ -1,6 +1,6 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
-h.log(a(1));
+hlp.log(a(1));
 
 function a(foo) {
     if (foo > 20) return foo;

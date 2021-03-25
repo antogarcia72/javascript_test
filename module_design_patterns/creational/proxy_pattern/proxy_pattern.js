@@ -26,8 +26,8 @@ const handler1 = {};
 
 const proxy1 = new Proxy(target, handler1);
 
-h.log(proxy1.message1); // hello
-h.log(proxy1.message2); // everyone
+hlp.log(proxy1.message1); // hello
+hlp.log(proxy1.message2); // everyone
 
 // ---------------------- //
 // To customize the proxy //
@@ -44,8 +44,8 @@ const handler2 = {
 
 const proxy2 = new Proxy(target, handler2);
 
-h.logGreen(proxy2.message1); // world
-h.logGreen(proxy2.message2); // world
+hlp.logGreen(proxy2.message1); // world
+hlp.logGreen(proxy2.message2); // world
 
 // -------------------------------- //
 // Ejemplo 1 (Get de una propiedad) //
@@ -62,8 +62,8 @@ const handler3 = {
 
 const proxy3 = new Proxy(target, handler3);
 
-h.logCyan(proxy3.message1); // hello
-h.logCyan(proxy3.message2); // world
+hlp.logCyan(proxy3.message1); // hello
+hlp.logCyan(proxy3.message2); // world
 
 // --------------------------------- //
 // Ejemplo 3 (Validador para un SET) //
@@ -92,6 +92,6 @@ let validator = {
 const person = new Proxy({}, validator);
 
 person.age = 100;
-h.logYellow(person.age); // 100
+hlp.logYellow(person.age); // 100
 person.age = 'young';    // Throws an exception
 person.age = 300;        // Throws an exception

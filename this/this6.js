@@ -1,4 +1,4 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
 function bind(fn, o) {
     return function () {
@@ -6,13 +6,13 @@ function bind(fn, o) {
     }
 }
 function foo() {
-    h.log(this.bar);
+    hlp.log(this.bar);
 }
 
 var obj = { bar: 'bar' }
 var obj2 = { bar: 'bar2' }
 
-h.log('Hard binding')
+hlp.log('Hard binding')
 foo = bind(foo, obj);
 
 foo();

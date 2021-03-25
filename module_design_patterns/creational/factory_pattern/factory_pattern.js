@@ -7,7 +7,7 @@ var moduleManager = function ModuleFactory() {
             publicAPI.baz();
         },
         baz: function () {
-            h.log('baz');
+            hlp.log('baz');
         }
     }
 

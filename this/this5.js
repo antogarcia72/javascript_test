@@ -1,7 +1,7 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
 function foo() {
-    h.log(this.bar);
+    hlp.log(this.bar);
 }
 
 var obj = { bar: 'bar' }

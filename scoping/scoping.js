@@ -1,10 +1,10 @@
-const h = require('../helper/helper').helper;
+const hlp = require('../helper/helper').helper;
 
 /**
  * Ejemplo de dynamic scoping
  */
 function foo() {
-	h.log(bar); // dynamic!!
+	hlp.log(bar); // dynamic!!
 };
 
 function baz() {
