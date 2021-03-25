@@ -1,1 +1,7 @@
 Closure is when a function "remembers" its lexical scope even whwn is executed outside that lexical scope
+
+A closure is referred to as an inner function having access to the variables in the outer function’s scope chain. The closure has accesses to three scoped variables:
+
+1. Variables in their own scope
+2. Variables in the function’s scope
+3. Global variables

@@ -1,0 +1,28 @@
+There are two ways of creating functions in JavaScript.
+
+1. Function Declaration
+2. Function Expression
+
+1. Function Declaration: it defines the function with the specified parameters.
+
+Syntax: 
+    function name(paramater1, parameter2,…) {
+        Statement block
+        .
+        .
+        .
+    }
+
+Function declarations hoist the definitions and therefore you can use these functions even before they are declared. 
+This behavior holds valid if your functions are declared inside the global or the functional scope which is also known 
+as Local Scope in JS. Never use function declarations inside conditional blocks.
+
+2. Function Expression: The keyword “function” is used to define a function within a function.
+
+Syntax: 
+    const myFunc= function [name] (parameter1, parameter2, ….) {
+        [ statements] 
+    }
+    
+Where [name] is an optional parameter.
+As a result of which these are anonymous functions.

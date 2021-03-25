@@ -321,7 +321,7 @@ var helper = {
    * @param {string} [mensaje] El mensaje que queremos sacar por consola
    */
   log: function (mensaje) {
-    console.log(chalk.yellow.bold(mensaje));
+    console.log(chalk.white.bold(mensaje));
   },
 
   /**
