@@ -1,5 +1,9 @@
 const hlp = require('../helper/helper').helper;
 
+hlp.log("\n\n--------------------");
+hlp.log("Ejemplo 5 de closure");
+hlp.log("--------------------\n");
+
 function foo() {
 	var bar = 0;
 

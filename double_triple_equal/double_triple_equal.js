@@ -1,5 +1,9 @@
 const hlp = require('../helper/helper').helper;
 
+hlp.log("\n\n-----------------");
+hlp.log("Ejemplo de == y ===");
+hlp.log("-------------------\n");
+
 var cadena = '1';
 
 var obj1 = {

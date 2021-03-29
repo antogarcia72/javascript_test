@@ -2,6 +2,10 @@
 
 const hlp = require('../helper/helper').helper;
 
+hlp.log("\n\n---------------");
+hlp.log("Ejemplo de arrays");
+hlp.log("-----------------\n");
+
 const cars1 = ["Porsche", "Audi", "BMW", "Volkswagen"];
 const cars2 = [
 	{ brand: "Porsche", price: 100000 },
@@ -29,7 +33,7 @@ const expensiveCars = cars2.filter(car => car.price >= 40000);
 // [{brand: "Porsche", price: 100000},
 //  {brand: "Audi", price: 80000}];
 hlp.logBlue('Uso del filter...')
-hlp.logYellow(h.JSONStringify(expensiveCars))
+hlp.logYellow(hlp.JSONStringify(expensiveCars))
 
 // 3. Array.forEach()
 // Itera sobre el array y ejecuta la función para cada elemento
