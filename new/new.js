@@ -1,10 +1,5 @@
 const hlp = require('../helper/helper').helper;
 
-function foo() {
-	this.baz = 'baz'
-	hlp.log(this.bar + ' ' + baz);
-};
-
 bar = 'bar';
 hlp.logBlue('Con el uso de new se crea un contexto nuevo, por eso muestra undefined undefined, pq this.bar no existe y baz tampoco, es un scope nuevo')
 var baz = new foo();

@@ -24,6 +24,11 @@ const clone5 = lodashClonedeep(food);
 // "_.clone()"
 const clone6 = _.clone(food);
 
+hlp.log("\n\n------------------");
+hlp.log("Ejemplo de cloning");
+hlp.log("------------------\n");
+
+
 hlp.logResult('Variable original:\n', JSON.stringify(food, undefined, 4));
 hlp.logResult('Clone 1 Spread ({ ...food }:\n', JSON.stringify(clone1, undefined, 4));
 hlp.logResult('Clone 2 "Object.assign({}, food):\n', JSON.stringify(clone2, undefined, 4));
