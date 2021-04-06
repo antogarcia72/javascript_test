@@ -1,6 +1,6 @@
 const hlp = require('../helper/helper').helper;
 
-hlp.log('---------------------');
+hlp.log('\n\n---------------------');
 hlp.log('Ejemplo 2 de hoisting');
 hlp.log('---------------------\n');
 
