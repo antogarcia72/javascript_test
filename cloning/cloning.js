@@ -18,10 +18,10 @@ const clone3 = JSON.parse(JSON.stringify(food))
 // "Object.fromEntries"
 const clone4 = Object.fromEntries(Object.entries(food))
 
-// "lodashClonedeep"
+// "lodashClonedeep" (Deep Clone)
 const clone5 = lodashClonedeep(food);
 
-// "_.clone()"
+// "_.clone()" (Deep Clone)
 const clone6 = _.clone(food);
 
 hlp.log("\n\n------------------");
