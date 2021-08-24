@@ -21,4 +21,4 @@ hlp.logYellow('Transformar una cadena en un objeto javascript JSON.parse\n')
 
 console.log(cadenaDesdeObjeto);
 
-hlp.logBlue('Transformar un objeto javascript en una json --> JSON.stringify\n')
+hlp.logBlue('Transformar un objeto javascript en una cadena --> JSON.stringify\n')

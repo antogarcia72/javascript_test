@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "module": "commonjs", // commonjs, AMD
+        "target": "es5" // es5, es6
+    },
+    "include": ["./"]
+}
