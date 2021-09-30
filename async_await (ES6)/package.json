@@ -1,0 +1,12 @@
+{
+  "name": "async_await",
+  "version": "1.0.0",
+  "main": "async_await.js",
+  "description": "Moódulo de pruebas de ES6",
+  "type": "module",
+  "author": "Antonio García Gómez",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.0.0"
+  }
+}
