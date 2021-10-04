@@ -2,9 +2,9 @@
 
 const hlp = require('../helper/helper').helper;
 
-hlp.log("\n\n---------------");
-hlp.log("Ejemplo de arrays");
-hlp.log("-----------------\n");
+hlp.log("\n\n----------------");
+hlp.log("Ejemplos de arrays");
+hlp.log("------------------\n");
 
 const cars = [
 	{ brand: "Porsche", price: 100000, builtIn: 2018 },
@@ -78,3 +78,15 @@ hlp.logBlue('Uso del set para unir dos arrays sin elementos repetidos (set)...')
 const carsTest = [...new Set([...cars1, ...cars3])]
 // Result - ["Porsche","Audi","BMW","Volkswagen","Renault","Aston Martin"];
 hlp.logYellow('Unión de arrays sin duplicados: "' + carsTest + '"')
+
+// 9. Remove duplicates in array
+const removeDuplicates = (arr) => [...new Set(arr)];
+hlp.logBlue('Eliminar elementos repetidos en un array usando set')
+hlp.logYellow(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6]));
+// Result: [ 1, 2, 3, 4, 5, 6 ]
+
+// 10. Chequear si un array está vacío
+const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
+
+hlp.logBlue('Chequear si un array está vacío')
+hlp.logYellow(isNotEmpty([1, 2, 3]));
