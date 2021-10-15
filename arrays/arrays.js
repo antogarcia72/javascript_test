@@ -15,7 +15,8 @@ const cars1 = ["Porsche", "Audi", "BMW", "Volkswagen"];
 const cars2 = [
 	{ brand: "Porsche", price: 100000 },
 	{ brand: "Audi", price: 80000 },
-	{ brand: "Toyota", price: 30000 }
+	{ brand: "Toyota", price: 30000 },
+	{ brand: "Volswagen", price: 40000 }
 ];
 const cars3 = ["Porsche", "Renault", "Aston Martin", "Volkswagen"];
 const numbers = [13, 65, 29, 81, 47];
@@ -25,8 +26,12 @@ const numbers = [13, 65, 29, 81, 47];
 const coolCars = cars1.map(car => `${car} is a pretty cool car brand!`);
 
 // Result:
-// ["Porsche is a pretty cool car brand!", "Audi is a pretty cool car brand!", 
-//  "BMW is a pretty cool car brand!", "Volkswagen is a pretty cool car brand!"];
+// [
+//	  "Porsche is a pretty cool car brand!", 
+//    "Audi is a pretty cool car brand!", 
+//    "BMW is a pretty cool car brand!", 
+//    "Volkswagen is a pretty cool car brand!"
+// ];
 
 hlp.logBlue('Uso del map... ')
 hlp.logYellow(hlp.JSONStringify(coolCars))
@@ -36,9 +41,12 @@ hlp.logYellow(hlp.JSONStringify(coolCars))
 const expensiveCars = cars2.filter(car => car.price >= 40000);
 
 // Result - Expensive Cars
-// [{brand: "Porsche", price: 100000},
-//  {brand: "Audi", price: 80000}];
-hlp.logBlue('Uso del filter...')
+// [
+//    {brand: "Porsche", price: 100000},
+//    {brand: "Audi", price: 80000}
+//    {brand: "Volkswagen", price: 40000}
+// ];
+hlp.logBlue('Uso del filter con coches de price >= 40000...')
 hlp.logYellow(hlp.JSONStringify(expensiveCars))
 
 // 3. Array.forEach()
@@ -61,6 +69,7 @@ hlp.logYellow(`The first expensive car will cost you ${expensiveCar.price} befor
 // Chequea si cada elemento del array cumple la condición que le hemos pasado
 hlp.logBlue('Uso del every...')
 const carsYoungerThanFiveYears = cars.every(car => car.builtIn >= 2016);
+
 // Result - Younger than 5 Years:
 // true
 hlp.logYellow('Todos los coches posteriores a 2016: "' + carsYoungerThanFiveYears + '"')
@@ -69,6 +78,7 @@ hlp.logYellow('Todos los coches posteriores a 2016: "' + carsYoungerThanFiveYear
 // Chequea si alguno de los elementos cumple la condición que le hemos pasado
 hlp.logBlue('Uso del some...')
 const carsOlderThanFiveYears = cars.some(car => car.builtIn < 2016);
+
 // Result - Older than 5 Years:
 // false
 hlp.logYellow('Todos los coches de más de cinco años: "' + carsOlderThanFiveYears + '"')
@@ -76,11 +86,13 @@ hlp.logYellow('Todos los coches de más de cinco años: "' + carsOlderThanFiveYe
 // 8. Merge two arrays removing duplicates
 hlp.logBlue('Uso del set para unir dos arrays sin elementos repetidos (set)...')
 const carsTest = [...new Set([...cars1, ...cars3])]
+
 // Result - ["Porsche","Audi","BMW","Volkswagen","Renault","Aston Martin"];
 hlp.logYellow('Unión de arrays sin duplicados: "' + carsTest + '"')
 
 // 9. Remove duplicates in array
 const removeDuplicates = (arr) => [...new Set(arr)];
+
 hlp.logBlue('Eliminar elementos repetidos en un array usando set')
 hlp.logYellow(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6]));
 // Result: [ 1, 2, 3, 4, 5, 6 ]
