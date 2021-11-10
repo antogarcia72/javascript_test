@@ -56,7 +56,7 @@ cars2.forEach((car) => {
   hlp.log(`The ${car.brand} will cost you ${car.price} before taxes`);
 });
 
-// 5. Array.find()
+// 4. Array.find()
 // Devuelve el primer elemento que cumple la condición que le hemos pasado
 hlp.logBlue("4. Uso del find...");
 const expensiveCar = cars2.find((car) => car.price >= 40000);
@@ -67,7 +67,7 @@ hlp.logYellow(
   `The first expensive car will cost you ${expensiveCar.price} before taxes`
 );
 
-// 6. Array.every()
+// 5. Array.every()
 // Chequea si cada elemento del array cumple la condición que le hemos pasado
 hlp.logBlue("5. Uso del every...");
 const carsYoungerThanFiveYears = cars.every((car) => car.builtIn >= 2016);
@@ -78,7 +78,7 @@ hlp.logYellow(
   'Todos los coches posteriores a 2016: "' + carsYoungerThanFiveYears + '"'
 );
 
-// 7. Array.some()
+// 6. Array.some()
 // Chequea si alguno de los elementos cumple la condición que le hemos pasado
 hlp.logBlue("6. Uso del some...");
 const carsOlderThanFiveYears = cars.some((car) => car.builtIn < 2016);
@@ -89,7 +89,7 @@ hlp.logYellow(
   'Todos los coches de más de cinco años: "' + carsOlderThanFiveYears + '"'
 );
 
-// 8. Merge two arrays removing duplicates
+// 7. Merge two arrays removing duplicates
 hlp.logBlue(
   "7. Uso del set para unir dos arrays sin elementos repetidos (set)..."
 );
@@ -105,8 +105,43 @@ hlp.logBlue("8. Eliminar elementos repetidos en un array usando set");
 hlp.logYellow(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6]));
 // Result: [ 1, 2, 3, 4, 5, 6 ]
 
-// 10. Chequear si un array está vacío
+// 9. Chequear si un array está vacío
 const isNotEmpty = (arr) => Array.isArray(arr) && arr.length > 0;
 
 hlp.logBlue("9. Chequear si un array está vacío");
 hlp.logYellow(isNotEmpty([1, 2, 3]));
+
+// 11. Compare two arrays
+// `a` and `b` are arrays
+const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+// Or
+const isEqual = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
+// Examples
+isEqual([1, 2, 3], [1, 2, 3]); // true
+isEqual([1, 2, 3], [1, '2', 3]); // false
+
+// 12. Convert an array of objects to a single object
+const toObject = (arr, key) => arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {});
+// Or
+const toObject = (arr, key) => Object.fromEntries(arr.map((it) => [it[key], it]));
+
+// Example
+toObject([
+{ id: '1', name: 'Alpha', gender: 'Male' },
+{ id: '2', name: 'Bravo', gender: 'Male' },
+{ id: '3', name: 'Charlie', gender: 'Female' }],
+'id');
+/*
+{
+'1': { id: '1', name: 'Alpha', gender: 'Male' },
+'2': { id: '2', name: 'Bravo', gender: 'Male' },
+'3': { id: '3', name: 'Charlie', gender: 'Female' }
+}
+*/
+
+// 13. Check if an array is not empty
+const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0;
+
+// Examples
+isNotEmpty([]); // false
+isNotEmpty([1, 2, 3]); // true
