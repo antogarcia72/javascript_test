@@ -115,22 +115,28 @@ hlp.logYellow(isNotEmpty([1, 2, 3]));
 // `a` and `b` are arrays
 const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 // Or
-const isEqual = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
+const isEqual = (a, b) =>
+  a.length === b.length && a.every((v, i) => v === b[i]);
 // Examples
 isEqual([1, 2, 3], [1, 2, 3]); // true
-isEqual([1, 2, 3], [1, '2', 3]); // false
+isEqual([1, 2, 3], [1, "2", 3]); // false
 
 // 12. Convert an array of objects to a single object
-const toObject = (arr, key) => arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {});
+const toObject = (arr, key) =>
+  arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {});
 // Or
-const toObject = (arr, key) => Object.fromEntries(arr.map((it) => [it[key], it]));
+const toObject = (arr, key) =>
+  Object.fromEntries(arr.map((it) => [it[key], it]));
 
 // Example
-toObject([
-{ id: '1', name: 'Alpha', gender: 'Male' },
-{ id: '2', name: 'Bravo', gender: 'Male' },
-{ id: '3', name: 'Charlie', gender: 'Female' }],
-'id');
+toObject(
+  [
+    { id: "1", name: "Alpha", gender: "Male" },
+    { id: "2", name: "Bravo", gender: "Male" },
+    { id: "3", name: "Charlie", gender: "Female" },
+  ],
+  "id"
+);
 /*
 {
 '1': { id: '1', name: 'Alpha', gender: 'Male' },
@@ -145,3 +151,6 @@ const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0;
 // Examples
 isNotEmpty([]); // false
 isNotEmpty([1, 2, 3]); // true
+
+// 14. Check if an object is an array
+const isArray = (obj) => Array.isArray(obj);
