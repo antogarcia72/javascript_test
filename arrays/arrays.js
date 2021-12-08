@@ -115,7 +115,7 @@ hlp.logYellow(isNotEmpty([1, 2, 3]));
 // `a` and `b` are arrays
 const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 // Or
-const isEqual = (a, b) =>
+const isEqual2 = (a, b) =>
   a.length === b.length && a.every((v, i) => v === b[i]);
 // Examples
 isEqual([1, 2, 3], [1, 2, 3]); // true
@@ -125,7 +125,7 @@ isEqual([1, 2, 3], [1, "2", 3]); // false
 const toObject = (arr, key) =>
   arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {});
 // Or
-const toObject = (arr, key) =>
+const toObject2 = (arr, key) =>
   Object.fromEntries(arr.map((it) => [it[key], it]));
 
 // Example
@@ -146,7 +146,7 @@ toObject(
 */
 
 // 13. Check if an array is not empty
-const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0;
+const isNotEmpty2 = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0;
 
 // Examples
 isNotEmpty([]); // false
