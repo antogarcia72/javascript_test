@@ -453,7 +453,7 @@ array.length = 0;
 hlp.logYellow('For **emptying array** use array.length = 0: ' + array.length);
 
 // 15. splice... Reduce an array length
-hlp.logBlue('15. length. Reducir el tamaño de un array usando la asignación de length');
+hlp.logBlue('15. length. Reducir el tamaño de un array usando splice');
 
 const myArray = ['a', 'b', 'c', 'd'];
 myArray.splice(0, 2); // [('a', 'b')];
@@ -468,3 +468,16 @@ var array2 = [4, 5, 6];
 const concatenatedArrays = array1.concat(array2); // [1,2,3,4,5,6];
 
 hlp.logYellow('Iniciales [1, 2, 3] y [4, 5, 6]. Con array1.concat(array2): ', concatenatedArrays);
+
+// 17. Delete property for all objects in an array
+hlp.logBlue('17. Delete property for all objects in an array');
+
+// this.test.forEach(data =>  delete data.subsystems });
+const deploymentSubsystemList = this.test.map((data) => {
+    delete data.subsystems;
+    return data;
+});
+
+hlp.logYellow('Array de test sin subsytems: ', deploymentSubsystemList);
+
+
