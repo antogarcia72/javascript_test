@@ -473,11 +473,29 @@ hlp.logYellow('Iniciales [1, 2, 3] y [4, 5, 6]. Con array1.concat(array2): ', co
 hlp.logBlue('17. Delete property for all objects in an array');
 
 // this.test.forEach(data =>  delete data.subsystems });
-const deploymentSubsystemList = this.test.map((data) => {
+const deploymentSubsystemList = test.map((data) => {
     delete data.subsystems;
     return data;
 });
 
 hlp.logYellow('Array de test sin subsytems: ', deploymentSubsystemList);
 
+// 18. Get the Last Items in an Array
+hlp.logBlue('18. Get the Last Items in an Array');
 
+let arrayD = [0, 1, 2, 3, 4, 5, 6, 7]
+hlp.logYellow(arrayD.slice(-1)); // [7]
+hlp.logYellow(arrayD.slice(-2)); // [6, 7]
+hlp.logYellow(arrayD.slice(-3)); // [5, 6, 7]
+
+// 19. Sort number arrays
+hlp.logBlue('19. Sort number arrays');
+
+hlp.logYellow([0,10,4,9,123,54,1].sort((a,b) => a-b));
+// >>> [0, 1, 4, 9, 10, 54, 123]
+
+// 20. Removing Falsy Values From Arrays
+hlp.logBlue('20. Removing Falsy Values From Arrays');
+
+const falsies =  [undefined,  null,  NaN,  0,  '',  false, true, 1];
+hlp.logYellow(falsies.filter(Boolean));

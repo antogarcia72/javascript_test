@@ -1,7 +1,7 @@
 // Librerías necesarias
 const fsLibrary = require('fs');
 // const moment = require('../node_modules/moment');
-const chalk = require('../node_modules/chalk');
+const chalk = require('chalk');
 
 // Formatos de fecha
 const formato_fecha_corto = 'DD/MM/YYYY';
@@ -341,9 +341,9 @@ var helper = {
      */
     logBlue: function (mensaje, objetos) {
         if (objetos) {
-            console.log(chalk.blue.bold(mensaje), objetos);
+            console.log('\n' + chalk.blue.bold(mensaje), objetos);
         } else {
-            console.log(chalk.blue.bold(mensaje));
+            console.log('\n' + chalk.blue.bold(mensaje));
         }
     },
 
