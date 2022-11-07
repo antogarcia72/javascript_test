@@ -141,7 +141,7 @@ const isEqual2 = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]
 
 // Examples
 hlp.logYellow('Debería ser igual:' + isEqual([1, 2, 3], [1, 2, 3])); // true
-hlp.logYellow('No debería ser igual:' + isEqual([1, 2, 3], [1, '2', 3])); // false
+hlp.logYellow('No debería ser igual:' + isEqual2([1, 2, 3], [1, '2', 3])); // false
 
 hlp.logBlue('11. Convert an array of objects to a single object');
 
@@ -499,3 +499,9 @@ hlp.logBlue('20. Removing Falsy Values From Arrays');
 
 const falsies =  [undefined,  null,  NaN,  0,  '',  false, true, 1];
 hlp.logYellow(falsies.filter(Boolean));
+
+// JSON Object Not indented
+console.log(JSON.stringify({name:"John",Age:23}));
+
+// JSON Object indented
+console.log(JSON.stringify({name:"John",Age:23},null,'\t'));
